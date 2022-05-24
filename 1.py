@@ -1,3 +1,7 @@
+"""
+This program solves the challenge of: http://www.pythonchallenge.com/pc/def/map.html
+"""
+
 from curses.ascii import isalpha
 from hashlib import new
 
