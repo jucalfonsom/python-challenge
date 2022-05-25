@@ -2,18 +2,17 @@
 This program solves the challenge of: http://www.pythonchallenge.com/pc/def/map.html
 """
 
-from curses.ascii import isalpha
-from hashlib import new
+import string
 
 
 def decoding(message):
     message_uncrypted = ''
     for letter in message:
-        if  isalpha(letter):
+        if letter in string.ascii_letters: 
             letter_char = int(ord(letter))
             new_letter_char = letter_char + 2
-            if new_letter_char > 122:
-                new_letter_char = (new_letter_char - 123) + int(ord('a'))
+            if new_letter_char > ord('z'):
+                new_letter_char = (new_letter_char - (ord('z') + 1)) + ord('a')
 
             letter = chr(new_letter_char)
 
@@ -29,7 +28,7 @@ def run():
 
     print('-' * 40)
     
-    url_unencrypted = decoding("map") # http://www.pythonchallenge.com/pc/def/ocr.html
+    url_unencrypted = decoding("map") # http://www.pythonchallenge.com/pc/def/map.html
     print(url_unencrypted)
 
 
