@@ -14,6 +14,8 @@ Concepts:
 * [Lib/string.py](https://docs.python.org/3/library/string.html)
 * [Lib/re.py](https://docs.python.org/3/library/string.html)
 * [Lib/urllib/request.py](https://docs.python.org/3/library/urllib.request.html)
+* [Lib/pickle.py](https://docs.python.org/es/3/library/pickle.html)
+
 
 ## Author ✒️
 
